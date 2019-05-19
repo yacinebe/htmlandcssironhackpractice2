@@ -1,0 +1,462 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+* {font-family: 'Poppins', sans-serif;}
+
+/* Styling navigation bar, the media query at the bottom makes it responsive by changing flex-direction */
+
+nav {
+  background-color: #C12127;
+  color: rgba(255,255,255,0.8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9em;
+}
+
+nav .top-left a
+{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+nav .top-links {
+ display: flex;
+ justify-content: space-around;
+ list-style: none;
+}
+
+nav .top-links li {
+  margin: 0 10px;
+ }
+ 
+nav a {
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+}
+
+
+@media all and (max-width: 900px)
+
+{
+
+nav, nav .top-links {
+
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 0px;
+    
+}
+
+nav .top-left a { margin-top: 10px; }
+
+nav .top-links {
+
+  text-align: center;
+  
+  }
+
+}
+
+/* Styling header - the --search_bar_height variable sets the overall weight of the header */
+
+/* Search bar */
+
+header {
+
+  
+  background-image: url("../images/city-scape.svg"); 
+  background-size: 136% 136%;
+ 
+  background-repeat: repeat;
+  --search_bar_height: 60px;
+  background-color: rgb(32, 101, 136);
+  background-size: cover;
+  background-position: left 100px top 0px;
+  height: 400px;
+
+}
+
+#header_search_bar {
+
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 5px 0px 5px 5px;
+
+
+}
+
+#search_image {
+
+  margin-right: 2%;
+}
+
+#header_search_items_container {
+
+  
+  flex-grow:1;
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 0px 5px 5px;
+  color: lightgray;
+  font-size: 0.8em;
+  margin: auto 10px auto 10px;
+
+}
+
+#search_bar {
+
+  flex-grow:1;
+  height: calc(var(--search_bar_height) - 12px);
+  background-color: rgb(31, 82, 111);
+  color: white;
+  padding: 5.5px 5.5px  5.5px 10.5px;
+  border-width: 0.5px 0.5px 0.5px 0.5px;
+  border-color: white;
+
+}
+
+#search_button_magnifier {
+
+  width: 3%;
+  height: var(--search_bar_height);
+  margin-right: 1.5%;
+  background-color: rgb(31, 82, 111);
+  border-width: 0.5px 0.5px 0.5px 0px;
+  border-color: white;
+  background-image: url(../images/magnifier.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: white;
+  background-position: left 0% top 50%;
+  /*background-position: right 5% top 0%;*/
+
+}
+
+#search_text {
+
+  margin-right: 1.5%;
+}
+
+#search_text  a {text-decoration: none; color: white; font-size: 1.2em;}
+
+#search_button_bear
+
+{
+
+  width: 62px;
+  height: var(--search_bar_height);
+  background-image:url("../images/bear-logo.png");
+  background-size: auto var(--search_bar_height);
+  background-repeat:repeat;
+  border-style: none;
+  
+
+}
+
+/* main content */ 
+
+#header_content {
+
+  width: 40%;
+  margin: 0 auto;
+}
+
+h1
+
+{
+
+  
+ font-weight: normal;
+  color: white;
+  font-size: 2.2em;
+}
+
+#header_content p
+
+{
+
+  
+  color: white;
+  font-size: 1em;
+  width: 90%;
+  padding-bottom: 25px;
+
+}
+
+.content_button
+{
+
+  border-radius: 15px;
+  background-color:rgb(240, 146, 51);
+  color: white;
+  font-size: 0.8em;
+  padding: 10px;
+  border-style: none;
+  letter-spacing: 1.5px;
+
+}
+
+@media all and (max-width: 900px)
+{
+
+header 
+
+{
+
+  --search_bar_height: 30px;
+  height: 600px;
+  background-color:  rgb(29, 78, 105);
+  /* background-position: top 150px left 0px; */
+  background-image: none;
+  padding-top: 15px;
+}
+
+#header_content {
+
+  width: 80%;
+}
+
+#header_search_bar
+
+{
+
+  flex-direction: column;
+}
+
+#header_search_items_container {
+
+  width: 80%;
+  font-size: 0.3em;
+}
+
+ #search_button_bear{
+
+
+  background-repeat:no-repeat; 
+  background-size: 80%;
+  background-color: rgb(29, 78, 105);
+
+
+}
+
+
+#search_text {
+
+  margin: auto;
+  padding: 2px;
+  
+}
+
+}
+
+/* Styling the first content section on collaboration */
+
+#orga 
+
+{
+  background: rgb(39, 53, 71);
+  padding: 50px 0px 50px 0px;
+}
+
+
+#orga_content {
+
+  width: 60%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  background: rgb(39, 53, 71);
+  color: white;
+}
+
+#orga_content h1 {
+
+  font-weight: normal;
+}
+
+#orga_content_text
+
+{
+
+  margin-left: 5%;
+
+}
+
+#orga_content_text ul
+
+{
+
+  margin-left: 5%;
+  line-height: 200%; 
+  font-size: 1em;
+
+}
+
+#orga button
+
+{
+ background-color: rgb(203, 56, 55);
+
+}
+
+#orga_content_learn_more {
+
+margin: 0px 0px 0px 0px;
+}
+
+#orga_content_learn_more a {
+
+  text-decoration: none;
+  color: white;
+
+}
+
+@media all and (max-width: 900px)
+{
+
+#orga_content{
+
+width: 80%;
+flex-direction: column;
+}
+
+
+#orga_content_text ul {
+
+  margin-left: 0px;
+  padding: 0px;
+}
+
+}
+
+/* Styling second section */
+
+#description
+
+{
+
+background:url(../images/forklift.svg);
+background-size: cover;
+
+
+}
+
+#description_text
+
+{
+ width: 40%;
+margin: 0px auto 0px auto;
+padding: 2% 0px 2% 0px;
+
+
+}
+
+#description_text p
+
+{
+ width: 50%;
+ color: white;
+ 
+
+}
+
+#description button
+{
+
+  background-color: rgb(203, 56, 55);
+}
+
+@media all and (max-width: 900px)
+{
+
+  #description_text, #description_text p
+  {
+
+    width: 80%;
+  }
+}
+
+
+
+#building_blocks_main_text {
+
+
+  width: 70%;
+  margin: auto;
+  padding-bottom: 15px;
+
+}
+
+#building_blocks_main_text h1
+
+{
+
+  color: black;
+  text-align: center;
+}
+
+
+
+
+#building_blocks_main_text h2 {
+
+  text-align: center;
+  font-size: 0.8em;
+  font-weight: normal;
+  
+  }
+
+#building_blocks_articles {
+
+  display: flex;
+  width: 60%;
+  margin: auto;
+  text-align: center;
+
+}
+
+#building_blocks_articles h2 p a {
+
+  text-align: center;
+
+}
+
+#building_blocks_articles p {
+
+  width: 80%;
+  margin: auto;
+
+}
+
+
+#building_blocks_articles a {
+
+
+color: rgb(208, 74, 73);
+text-decoration: none;
+font-weight: bold;
+
+}
+  
+@media all and (max-width: 900px)
+{
+
+  #building_blocks_articles {
+
+    flex-direction: column;
+
+  }
+
+  
+  #building_blocks_articles p {
+
+    padding-bottom: 20px;
+    width: 100%;
+
+  }
+
+}
